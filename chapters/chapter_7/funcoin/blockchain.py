@@ -210,7 +210,17 @@ class Blockchain:
             return False
         return True
     def math(index):
-        return True 
+        q=5*index
+        while (q<=5*index+5):
+          resp=[]
+          a=2
+          while (a<=q):
+              if(math.gcd(q,a)==1):
+                  resp.append(q/a)
+              a=a+1
+          q=q+1
+      #  print (resp)
+        return resp; 
 # Instantiate the Node
 app = Flask(__name__)
 
