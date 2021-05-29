@@ -210,7 +210,21 @@ class Blockchain:
             return False
         return True
     def math(index):
-        return True 
+        lower = index*5                                    
+        upper = index*5+5
+        resp = []
+#print("Prime numbers between", lower, "and", upper, "are:")
+
+        for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+            if num > 1:
+               for i in range(2, num):
+                   if (num % i) == 0:
+                      break
+               else:
+                 resp.append(num)
+                # print(num)
+        return num
 # Instantiate the Node
 app = Flask(__name__)
 
